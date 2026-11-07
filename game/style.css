@@ -1,0 +1,12 @@
+:root { color-scheme: dark; }
+body { margin: 0; font-family: sans-serif; background: #101410; color: #f4f1e8; }
+main { max-width: 40rem; margin: 0 auto; padding: 1.5rem; }
+a { color: #3ddc84; }
+button, .card { font: inherit; }
+button { min-height: 44px; padding: 0.4rem 1rem; }
+.board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 1rem; }
+.card { min-height: 72px; border-radius: 8px; border: 1px solid #3ddc84; background: #18211d; color: inherit; }
+.card.is-open, .card.is-matched { background: #234232; }
+@media (max-width: 500px) {
+  .board { grid-template-columns: repeat(3, 1fr); }
+}

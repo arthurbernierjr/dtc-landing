@@ -1,0 +1,127 @@
+:root {
+  --color-bg: #0e1412;
+  --color-ink: #f4f1e8;
+  --color-muted: #c5d0c8;
+  --color-accent: #3ddc84;
+  --color-card: #18211d;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --space-s: 0.75rem;
+  --space-m: 1.25rem;
+  --space-l: 3rem;
+  --measure: 68rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.skip {
+  position: absolute;
+  left: var(--space-s);
+  top: -4rem;
+  background: var(--color-accent);
+  color: #06210f;
+  padding: 0.4rem 0.8rem;
+}
+
+.skip:focus { top: var(--space-s); }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+}
+
+.site-header__nav a,
+.hero__cta,
+.contact a {
+  color: var(--color-accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.hero,
+.skills,
+.about,
+.contact,
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-l) var(--space-m);
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  margin: 0.2rem 0;
+}
+
+.hero__cta {
+  align-self: flex-start;
+  margin-top: var(--space-m);
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.hero__cta:hover {
+  background: var(--color-accent);
+  color: #06210f;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-m);
+  padding: 0;
+  list-style: none;
+}
+
+.skill-card {
+  background: var(--color-card);
+  padding: var(--space-m);
+  border-radius: 12px;
+  transition: transform 200ms ease;
+}
+
+.skill-card:hover { transform: translateY(-4px); }
+
+@media (min-width: 700px) {
+  .skills__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__cta,
+  .skill-card { transition: none; }
+  .skill-card:hover { transform: none; }
+}
