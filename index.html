@@ -4,9 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arthur Bernier Jr · Character sheet</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,10 +19,22 @@
   </header>
   <main id="main">
     <section class="hero">
-      <p class="hero__eyebrow">Unit 2 · example</p>
-      <h1 class="hero__title">Arthur Bernier Jr</h1>
-      <p class="hero__lede">I build the whole path from the terminal to a shipped product, and I write it down so the next person can follow.</p>
-      <a class="hero__cta" href="#contact">Start a conversation</a>
+      <div class="hero__copy">
+        <p class="eyebrow">Unit 2 · example</p>
+        <h1 class="hero__title">Arthur Bernier Jr</h1>
+        <p class="hero__lede">I build the whole path from the terminal to a shipped product, and I write it down so the next person can follow.</p>
+        <a class="hero__cta" href="#contact">Start a conversation</a>
+      </div>
+      <aside class="sheet" aria-label="Sheet summary">
+        <p class="sheet__kicker">Now playing</p>
+        <p class="sheet__title">The path</p>
+        <p class="sheet__meta">Act I · Foundation</p>
+        <ul class="sheet__list">
+          <li>Interfaces <span>HTML · CSS</span></li>
+          <li>Servers <span>Node · data</span></li>
+          <li>Judgment <span>Tests · access</span></li>
+        </ul>
+      </aside>
     </section>
     <section class="skills" id="skills">
       <h2 class="skills__title">What I can do</h2>
@@ -44,14 +53,16 @@
         </li>
       </ul>
     </section>
-    <section class="about" id="about">
-      <h2 class="about__title">About</h2>
-      <p>This page is the finished example for the Unit 2 landing-page quest in Deeper Than Code. The game from Unit 3 lives one path over.</p>
-    </section>
-    <section class="contact" id="contact">
-      <h2 class="contact__title">Contact</h2>
-      <p><a href="https://bigpoppacode.io/">bigpoppacode.io</a></p>
-    </section>
+    <div class="band">
+      <section id="about">
+        <h2 class="band__title">About</h2>
+        <p>This page is the finished example for the Unit 2 landing-page quest. The type, the green, and the near-black are the same ones the guide uses. The arena from Unit 3 is one path over.</p>
+      </section>
+      <section id="contact">
+        <h2 class="band__title">Contact</h2>
+        <p><a href="https://bigpoppacode.io/">bigpoppacode.io</a></p>
+      </section>
+    </div>
   </main>
   <footer class="site-footer">
     <p>© Arthur Bernier Jr</p>
